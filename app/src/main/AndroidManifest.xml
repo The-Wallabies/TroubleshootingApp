@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Troubleshooter">
-        <activity android:name=".SimCardActivity"></activity>
+        <activity android:name=".SuspiciousMessageNextActivity"></activity>
+        <activity android:name=".PopUpMessageActivity" />
+        <activity android:name=".SuspiciousMessageActivity" />
+        <activity android:name=".BluetoothActivity" />
+        <activity android:name=".BadBatteryActivity" />
+        <activity android:name=".SlowPhoneActivity" />
+        <activity android:name=".NoSpaceActivity" />
+        <activity android:name=".UpdatePhoneActivity" />
+        <activity android:name=".DeviceActivity" />
+        <activity android:name=".WifiActivity" />
+        <activity android:name=".SimCardActivity" />
         <activity android:name=".ConnectivityActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button connectivityButton = findViewById(R.id.connectivity);
+        Button deviceButton = findViewById(R.id.device_issues);
+        Button suspiciousMessageButton = findViewById(R.id.pop_up_messages);
 
         connectivityButton.setOnClickListener(v -> {
 
@@ -28,10 +30,47 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
 
         });
+
+        deviceButton.setOnClickListener(v -> {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Restarting your phone!");
+            builder.setMessage("Before trying any of the troubleshooting steps outlined further, it is best to try restarting your phone");
+            builder.setPositiveButton("OK", (dialog, which) -> {
+                goToDeviceActivity();
+            });
+            builder.setCancelable(false);
+            builder.show();
+
+        });
+        suspiciousMessageButton.setOnClickListener(v -> {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Restarting your phone!");
+            builder.setMessage("Before trying any of the troubleshooting steps outlined further, it is best to try restarting your phone");
+            builder.setPositiveButton("OK", (dialog, which) -> {
+                goToPopUpMessageActivity();
+            });
+            builder.setCancelable(false);
+            builder.show();
+
+        });
     }
+
+
 
     private void goToConnectivity() {
         Intent intent = new Intent(MainActivity.this, ConnectivityActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToDeviceActivity() {
+        Intent intent = new Intent(MainActivity.this, DeviceActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToPopUpMessageActivity() {
+        Intent intent = new Intent(MainActivity.this, PopUpMessageActivity.class);
         startActivity(intent);
     }
 }

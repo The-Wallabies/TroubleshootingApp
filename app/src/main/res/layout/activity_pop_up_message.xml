@@ -10,36 +10,19 @@
         android:id="@+id/connectivityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Common Connectivity Issues"
+        android:text="Pop Up Message Issues"
         android:textSize="25sp"
         android:textAlignment="center"
         />
 
     <Button
-        android:id="@+id/simCardButton"
+        android:id="@+id/suspiciousMessages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/connectivityText"
         android:layout_marginTop="50sp"
-        android:text="SIM Card"
+        android:text="Suspicious Messages"
         />
 
-    <Button
-        android:id="@+id/wifiButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/simCardButton"
-        android:layout_marginTop="25sp"
-        android:text="WiFi"
-        />
-
-    <Button
-        android:id="@+id/bluetoothButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wifiButton"
-        android:layout_marginTop="25sp"
-        android:text="Bluetooth"
-        />
 
 </RelativeLayout>

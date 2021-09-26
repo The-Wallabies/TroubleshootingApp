@@ -10,36 +10,44 @@
         android:id="@+id/connectivityText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Common Connectivity Issues"
+        android:text="Common Device Issues"
         android:textSize="25sp"
         android:textAlignment="center"
         />
 
     <Button
-        android:id="@+id/simCardButton"
+        android:id="@+id/updateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/connectivityText"
         android:layout_marginTop="50sp"
-        android:text="SIM Card"
+        android:text="How To Install Updates"
         />
 
     <Button
-        android:id="@+id/wifiButton"
+        android:id="@+id/spaceButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/simCardButton"
+        android:layout_below="@+id/updateButton"
         android:layout_marginTop="25sp"
-        android:text="WiFi"
+        android:text="Device Out Of Space"
         />
 
     <Button
-        android:id="@+id/bluetoothButton"
+        android:id="@+id/slowButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/wifiButton"
+        android:layout_below="@+id/spaceButton"
         android:layout_marginTop="25sp"
-        android:text="Bluetooth"
+        android:text="Phone Running Slowly"
         />
 
+    <Button
+        android:id="@+id/batteryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slowButton"
+        android:layout_marginTop="25sp"
+        android:text="Poor Battery Life"
+        />
 </RelativeLayout>

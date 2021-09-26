@@ -23,12 +23,21 @@
         android:text="Connectivity"/>
 
     <Button
-        android:id="@+id/general_apps"
+        android:id="@+id/device_issues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="20sp"
         android:layout_below="@+id/connectivity"
-        android:text="General Apps"/>
+        android:text="Device Issues"/>
+
+    <Button
+        android:id="@+id/pop_up_messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/device_issues"
+        android:text="Pop Up Messages"/>
 
 </RelativeLayout>
