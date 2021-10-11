@@ -4,22 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimCardActivity"
-    android:layout_margin="50sp">
+    tools:context=".SimCardActivity">
 
     <TextView
         android:id="@+id/images"
         android:layout_width="match_parent"
         android:layout_height="250sp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:gravity="center_vertical|center_horizontal"
         android:text="A series of images, a slideshow or GIF will be placed here so you can visualise the steps that are below."/>
 
     <TextView
+        android:id="@+id/steps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Step 1: Do the thing\nStep 2: Do another thing\nStep 3: Do the third thing\nStep 4: Hopefully this works!"
         android:layout_marginTop="100sp"
         android:layout_below="@+id/images"
         />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5sp"
+        android:layout_below="@+id/steps"
+        android:text="Go To Settings"/>
 </RelativeLayout>

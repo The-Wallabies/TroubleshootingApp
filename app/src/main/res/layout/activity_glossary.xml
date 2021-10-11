@@ -2,39 +2,28 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".ConnectivityActivity">
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/images"
+            android:id="@+id/title_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:gravity="center_vertical|center_horizontal"
-            android:text="@string/bad_battery_header"/>
+            android:text="@string/glossary_header"/>
 
         <TextView
             android:id="@+id/steps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/images"
+            android:layout_below="@+id/title_text"
             android:layout_marginTop="10dp"
             android:textSize="16sp"
-            android:text="@string/bad_battery" />
-
-        <Button
-            android:id="@+id/settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5sp"
-            android:layout_below="@+id/steps"
-            android:text="Go To Settings"/>
+            android:text="@string/glossary" />
 
     </RelativeLayout>
-
 </ScrollView>

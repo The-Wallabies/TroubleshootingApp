@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimCardActivity"
-    android:layout_margin="50sp">
+    tools:context=".SimCardActivity">
 
     <TextView
         android:id="@+id/images"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/suspicious_messages_header"/>
 
@@ -23,6 +22,15 @@
         android:layout_marginTop="10dp"
         android:textSize="16sp"
         android:text="@string/suspicious_messages_2" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5sp"
+        android:layout_below="@+id/sus_text"
+        android:text="Go To Settings"/>
 
 
 </RelativeLayout>

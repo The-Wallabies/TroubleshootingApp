@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Button connectivityButton = findViewById(R.id.connectivity);
         Button deviceButton = findViewById(R.id.device_issues);
         Button suspiciousMessageButton = findViewById(R.id.pop_up_messages);
+        Button glossaryButton = findViewById(R.id.glossary);
+        glossaryButton.setOnClickListener(v -> goToGlossaryActivity());
 
         connectivityButton.setOnClickListener(v -> {
 
@@ -71,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToPopUpMessageActivity() {
         Intent intent = new Intent(MainActivity.this, PopUpMessageActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToGlossaryActivity() {
+        Intent intent = new Intent(MainActivity.this, GlossaryActivity.class);
         startActivity(intent);
     }
 }
