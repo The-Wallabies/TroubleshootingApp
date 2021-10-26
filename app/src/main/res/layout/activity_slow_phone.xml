@@ -1,37 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10sp">
+    tools:context=".SimCardActivity">
 
-
-    <TextView
-        android:id="@+id/images"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="@string/slow_phone_header"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/steps"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/images"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp"
-        android:text="@string/slow_phone" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="5sp"
-        android:layout_below="@+id/steps"
-        android:text="Go To Settings"/>
+            <ImageView
+                android:id="@+id/slowPhoneImages"
+                android:layout_width="300sp"
+                android:layout_height="300sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/slow_phone_01" />
 
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slowPhoneImages"
+                android:layout_alignStart="@id/slowPhoneImages"
+                android:layout_marginEnd="125sp"
+                android:text="Prev"
+                android:textSize="12sp" />
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/stepCounter"
+                android:layout_marginTop="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Step 1.1"
+                android:textSize="15sp"
+                android:layout_below="@+id/slowPhoneImages"
+
+                />
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/prevButton"
+                android:layout_alignBottom="@+id/prevButton"
+                android:layout_below="@+id/slowPhoneImages"
+                android:layout_alignEnd="@id/slowPhoneImages"
+                android:text="Next"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nextButton"
+
+                android:textSize="18sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/slow_phone_header"/>
+
+            <TextView
+                android:id="@+id/steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/images"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:layout_margin="20sp"
+                android:text="@string/slow_phone" />
+
+            <Button
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5sp"
+                android:layout_below="@+id/steps"
+                android:layout_marginBottom="20sp"
+                android:text="Go To Settings"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

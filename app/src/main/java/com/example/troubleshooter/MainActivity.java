@@ -18,45 +18,25 @@ public class MainActivity extends AppCompatActivity {
         Button deviceButton = findViewById(R.id.device_issues);
         Button suspiciousMessageButton = findViewById(R.id.pop_up_messages);
         Button glossaryButton = findViewById(R.id.glossary);
+        Button restartButton = findViewById(R.id.restartButton);
         glossaryButton.setOnClickListener(v -> goToGlossaryActivity());
 
-        connectivityButton.setOnClickListener(v -> {
+        restartButton.setOnClickListener(v -> {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Restarting your phone!");
-            builder.setMessage("Before trying any of the troubleshooting steps outlined further, it is best to try restarting your phone");
+            builder.setMessage("Before trying any of the troubleshooting steps outlined further, it is best to try restarting your phone. It can help the system clear up some memory so that it has more room to run faster and do the things you need quicker.");
             builder.setPositiveButton("OK", (dialog, which) -> {
-                goToConnectivity();
+                dialog.cancel();
             });
             builder.setCancelable(false);
             builder.show();
 
         });
 
-        deviceButton.setOnClickListener(v -> {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Restarting your phone!");
-            builder.setMessage("Before trying any of the troubleshooting steps outlined further, it is best to try restarting your phone");
-            builder.setPositiveButton("OK", (dialog, which) -> {
-                goToDeviceActivity();
-            });
-            builder.setCancelable(false);
-            builder.show();
-
-        });
-        suspiciousMessageButton.setOnClickListener(v -> {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Restarting your phone!");
-            builder.setMessage("Before trying any of the troubleshooting steps outlined further, it is best to try restarting your phone");
-            builder.setPositiveButton("OK", (dialog, which) -> {
-                goToPopUpMessageActivity();
-            });
-            builder.setCancelable(false);
-            builder.show();
-
-        });
+        connectivityButton.setOnClickListener(v -> goToConnectivity());
+        deviceButton.setOnClickListener(v -> goToDeviceActivity());
+        suspiciousMessageButton.setOnClickListener(v -> goToPopUpMessageActivity());
     }
 
 
