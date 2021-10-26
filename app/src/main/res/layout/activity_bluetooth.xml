@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SimCardActivity">
+    tools:context=".SimCardActivity"
+    android:layout_margin="10sp">
 
     <LinearLayout
         android:layout_width="match_parent"
