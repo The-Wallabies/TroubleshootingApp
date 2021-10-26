@@ -7,23 +7,22 @@
 
     <ImageView
         android:id="@+id/updatePhoneImages"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300sp"
+        android:layout_height="300sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:src="@drawable/step01" />
+        android:src="@drawable/settings_button_image" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button2"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
         android:layout_below="@+id/updatePhoneImages"
-        android:layout_alignEnd="@id/updatePhoneImages"
-        android:text="Next"
-        android:textSize="8sp" />
+        android:layout_alignStart="@id/updatePhoneImages"
+        android:layout_marginEnd="125sp"
+        android:text="Prev"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/stepCounter"
@@ -37,17 +36,15 @@
 
         />
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button1"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
         android:layout_below="@+id/updatePhoneImages"
-        android:layout_alignStart="@id/updatePhoneImages"
-        android:layout_marginRight="125sp"
-        android:text="Prev"
-        android:textSize="8sp" />
-
-
-
+        android:layout_alignEnd="@id/updatePhoneImages"
+        android:text="Next"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/images"
@@ -75,6 +72,5 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="5sp"
         android:text="Go To Settings" />
-
 
 </RelativeLayout>

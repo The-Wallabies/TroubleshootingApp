@@ -9,15 +9,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.sql.SQLOutput;
-
 public class UpdatePhoneActivity extends AppCompatActivity {
 
-    Button btprevious, btnext;
+    Button prevButton, nextButton;
     ImageView myImage;
     TextView stepCounterText;
-    public int imageCount = 0;
-    public static final int NUMBEROFIMAGES = 4;
+    public int imageCount = 1;
+    public static final int NUMBER_OF_IMAGES = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +26,15 @@ public class UpdatePhoneActivity extends AppCompatActivity {
             goToSettings();
         });
         myImage = (ImageView) findViewById(R.id.updatePhoneImages);
-        myImage.setImageResource(R.drawable.step01);
+        myImage.setImageResource(R.drawable.settings_button_image);
 
         stepCounterText = findViewById(R.id.stepCounter);
 
-        btprevious = (Button) findViewById(R.id.button1);
-        btnext = (Button) findViewById(R.id.button2);
+        prevButton = (Button) findViewById(R.id.button1);
+        nextButton = (Button) findViewById(R.id.button2);
 
-        btprevious.setOnClickListener(v -> checkButton(v));
-        btnext.setOnClickListener(v -> checkButton(v));
-
+        prevButton.setOnClickListener(v -> checkButton(v));
+        nextButton.setOnClickListener(v -> checkButton(v));
     }
 
     public void checkButton(View v) {
@@ -46,9 +43,9 @@ public class UpdatePhoneActivity extends AppCompatActivity {
             case R.id.button1:
                 imageCount++;
 
-                if(imageCount == NUMBEROFIMAGES +1)
+                if(imageCount == NUMBER_OF_IMAGES +1)
                 {
-                    imageCount = NUMBEROFIMAGES;
+                    imageCount = NUMBER_OF_IMAGES;
                 }
                 changeImage();
                 break;
@@ -71,14 +68,21 @@ public class UpdatePhoneActivity extends AppCompatActivity {
         switch (imageCount) {
 
             case 0:
-                myImage.setImageResource(R.drawable.step01);
+                myImage.setImageResource(R.drawable.settings_button_image);
                 stepCounterText.setText("Step 1");
                 break;
 
             case 1:
-                myImage.setImageResource(R.drawable.step02);
+                myImage.setImageResource(R.drawable.install_update_02);
                 stepCounterText.setText("Step 2");
-
+                break;
+            case 2:
+                myImage.setImageResource(R.drawable.install_update_03);
+                stepCounterText.setText("Step 3");
+                break;
+            case 3:
+                myImage.setImageResource(R.drawable.install_update_04);
+                stepCounterText.setText("Step 4");
                 break;
         }
     }
