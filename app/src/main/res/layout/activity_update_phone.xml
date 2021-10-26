@@ -16,22 +16,38 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button2"
         android:layout_alignBottom="@+id/button2"
-        android:layout_toRightOf="@+id/updatePhoneImages"
+        android:layout_below="@+id/updatePhoneImages"
+        android:layout_alignEnd="@id/updatePhoneImages"
         android:text="Next"
         android:textSize="8sp" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/stepCounter"
+        android:layout_marginTop="12sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Step 1"
+        android:textSize="15sp"
         android:layout_below="@+id/updatePhoneImages"
-        android:layout_toLeftOf="@+id/updatePhoneImages"
+
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updatePhoneImages"
+        android:layout_alignStart="@id/updatePhoneImages"
+        android:layout_marginRight="125sp"
         android:text="Prev"
         android:textSize="8sp" />
+
+
+
 
     <TextView
         android:id="@+id/images"

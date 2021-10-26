@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.sql.SQLOutput;
 
@@ -14,6 +15,7 @@ public class UpdatePhoneActivity extends AppCompatActivity {
 
     Button btprevious, btnext;
     ImageView myImage;
+    TextView stepCounterText;
     public int imageCount = 0;
     public static final int NUMBEROFIMAGES = 4;
 
@@ -28,6 +30,7 @@ public class UpdatePhoneActivity extends AppCompatActivity {
         myImage = (ImageView) findViewById(R.id.updatePhoneImages);
         myImage.setImageResource(R.drawable.step01);
 
+        stepCounterText = findViewById(R.id.stepCounter);
 
         btprevious = (Button) findViewById(R.id.button1);
         btnext = (Button) findViewById(R.id.button2);
@@ -69,10 +72,13 @@ public class UpdatePhoneActivity extends AppCompatActivity {
 
             case 0:
                 myImage.setImageResource(R.drawable.step01);
+                stepCounterText.setText("Step 1");
                 break;
 
             case 1:
                 myImage.setImageResource(R.drawable.step02);
+                stepCounterText.setText("Step 2");
+
                 break;
         }
     }
