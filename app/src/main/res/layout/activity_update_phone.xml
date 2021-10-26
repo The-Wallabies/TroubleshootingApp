@@ -15,7 +15,7 @@
         android:src="@drawable/settings_button_image" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/prevButton"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/updatePhoneImages"
@@ -36,21 +36,21 @@
 
         />
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/nextButton"
         android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:layout_alignBaseline="@+id/prevButton"
+        android:layout_alignBottom="@+id/prevButton"
         android:layout_below="@+id/updatePhoneImages"
         android:layout_alignEnd="@id/updatePhoneImages"
         android:text="Next"
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/images"
+        android:id="@+id/heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/nextButton"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/update_phone_header"
         android:textSize="18sp" />
@@ -59,8 +59,8 @@
         android:id="@+id/steps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/images"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/heading"
+        android:layout_margin="20dp"
         android:text="@string/update_phone"
         android:textSize="16sp" />
 
