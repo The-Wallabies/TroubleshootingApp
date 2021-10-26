@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Troubeshooter App!"
         android:textSize="40sp"
-        android:paddingTop="150dp"
+        android:paddingTop="100dp"
         android:textAlignment="center"/>
 
     <Button
@@ -48,5 +48,14 @@
         android:layout_marginTop="20sp"
         android:layout_below="@+id/pop_up_messages"
         android:text="Glossary"/>
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20sp"
+        android:layout_alignParentBottom="true"
+        android:text="Have you tried A Restart?"/>
 
 </RelativeLayout>
