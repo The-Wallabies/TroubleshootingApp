@@ -28,7 +28,7 @@ public class SlowPhoneActivity extends AppCompatActivity {
         nextButton = (Button) findViewById(R.id.prevButton);
 
         myImage = (ImageView) findViewById(R.id.slowPhoneImages);
-        myImage.setImageResource(R.drawable.settings_button_image);
+        myImage.setImageResource(R.drawable.slow_phone_01);
 
         stepCounterText = findViewById(R.id.stepCounter);
 
