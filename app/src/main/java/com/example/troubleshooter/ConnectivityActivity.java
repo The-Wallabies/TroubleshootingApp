@@ -13,11 +13,9 @@ public class ConnectivityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connectivity);
 
-        Button simCardButton = findViewById(R.id.simCardButton);
         Button wifiButton = findViewById(R.id.wifiButton);
         Button bluetoothButton = findViewById(R.id.bluetoothButton);
 
-        simCardButton.setOnClickListener(v -> goToSimCard());
         wifiButton.setOnClickListener(v -> goToWifi());
         bluetoothButton.setOnClickListener(v -> goToBluetooth());
 
@@ -25,10 +23,6 @@ public class ConnectivityActivity extends AppCompatActivity {
 
     }
 
-    private void goToSimCard() {
-        Intent intent = new Intent(ConnectivityActivity.this, SimCardActivity.class);
-        startActivity(intent);
-    }
 
     private void goToWifi() {
         Intent intent = new Intent(ConnectivityActivity.this, WifiActivity.class);

@@ -20,7 +20,6 @@
         <activity android:name=".UpdatePhoneActivity" />
         <activity android:name=".DeviceActivity" />
         <activity android:name=".WifiActivity" />
-        <activity android:name=".SimCardActivity" />
         <activity android:name=".ConnectivityActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
